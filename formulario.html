@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="atributes/style2.css">
+    <title>INSCRIPCIONES</title>
+</head>
+<body>
+    <!--Menu navbar-->
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary diagonal-gradient ">
+        <div class="container-fluid ">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">FreeStyleCanarias</a>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Eventos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="raperos.html">Rappers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="temas.html">Temas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="productoras.html">Productoras</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <!--Formulario-->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <br>
+                <h1 class="text-center">INSCRIPCIONES</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form action="formulario.php" method="POST">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="aka" class="form-label">AKA</label>
+                        <input type="text" class="form-control" id="aka" name="aka" placeholder="Aka">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Telefono</label>
+                        <input type="number" class="form-control" id="telefono" name="telefono" placeholder="Telefono">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" onclick="validarFormulario()">Enviar</button>
+                </form>
+            </div>
+        </div>
+</body>
+
+<script>
+    function validarFormulario(){
+        var nombre, aka, email, telefono;
+        nombre = document.getElementById("nombre").value;
+        aka = document.getElementById("aka").value;
+        email = document.getElementById("email").value;
+        telefono = document.getElementById("telefono").value;
+
+        if(nombre === "" || aka === "" || email === "" || telefono === ""){
+            alert("Todos los campos son obligatorios");
+            return false;
+        }
+    }
+
+    function writeDates(){
+
+    }
+</script>
