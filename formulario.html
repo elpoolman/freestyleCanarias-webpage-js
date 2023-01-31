@@ -56,31 +56,24 @@
                         <input type="text" class="form-control" id="aka" name="aka" placeholder="Aka">
                     </div>
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
-                    </div>
-                    <div class="mb-3">
                         <label for="telefono" class="form-label">Telefono</label>
                         <input type="number" class="form-control" id="telefono" name="telefono" placeholder="Telefono">
                     </div>
-
                     <button type="submit" class="btn btn-primary" onclick="validarFormulario()">Enviar</button>
                 </form>
             </div>
         </div>
-</body>
+      </body>
 
 <script>
     function validarFormulario(){
-        var nombre, aka, email, telefono;
+        var nombre, aka, telefono;
         nombre = document.getElementById("nombre").value;
         aka = document.getElementById("aka").value;
-        email = document.getElementById("email").value;
         telefono = document.getElementById("telefono").value;
 
-        if(nombre === "" || aka === "" || email === "" || telefono === ""){
+        if(nombre === "" || aka === "" || telefono === ""){
             alert("Todos los campos son obligatorios");
-            return false;
-        }
-    }
+            return false;}
+                      }
 </script>
